@@ -1,0 +1,77 @@
+# @package _global_
+
+# to execute this experiment run:
+# python train.py experiment=example
+
+defaults:
+  - override /data: images
+
+# all parameters below will be merged with parameters from default configurations set above
+# this allows you to overwrite only specified parameters
+
+tags: ["baseline"]
+seed: 12345
+is_local: False
+
+multiclass: True
+test: False
+lou_method: null
+test_folder_paths: []
+
+run_name: "staircase_fe_6c"
+result_save_path: ???
+ckpt_path: ???
+
+data:
+  dataset_name: "external_5patches"
+  data_root_dir: ???
+  batch_size: 256
+  multiclass: "${multiclass}"
+  methods: ["original", "dalle-3-images", "diffusiondb", "midjourney-images-new", "midjourney_tti", "realisticSDXL"]
+
+  patch_size: 224
+  top_k_patches: 5
+  patch_selection_criterion: "contrast"
+  patch_strategy: "max"
+
+test_dataset:
+  _target_: src.data.eval_dataset.EvalDataset
+
+  patch_size: 224
+  top_k_patches: 5
+  patch_selection_criterion: "contrast"
+  folder_path: ???
+
+  transform_eval:
+    _target_: albumentations.Compose
+    transforms:
+      - _target_: albumentations.CenterCrop
+        height: 224
+        width: 224
+        p: 1.0
+      - _target_: albumentations.pytorch.ToTensorV2
+
+model: 
+  _target_: src.models.detector_module.DetectorModule
+  methods: ${data.methods}
+  multiclass: "${multiclass}"
+  compile: False
+
+  feature_extractor:
+    _target_: src.models.components.staircase_feature_extractor.FeatureExtractorStaircase
+    model_path: null
+    freeze: False
+
+  mlp:
+    in_features: 512
+    intermediate_features: 256
+    methods: ${data.methods}
+    multiclass: "${multiclass}"
+  
+  optimizer:
+    lr: 0.0001
+    weight_decay: 0.0
+
+trainer:
+  min_epochs: 10
+  max_epochs: 30

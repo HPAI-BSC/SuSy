@@ -1,0 +1,35 @@
+_target_: src.data.img_datamodule.ImageDataModule
+batch_size: 64
+num_workers: 20
+pin_memory: False
+data_root_dir: ???
+multiclass: True
+
+transform_train:
+  _target_: albumentations.Compose
+  transforms:
+    - _target_: albumentations.CenterCrop
+      height: 224
+      width: 224
+      p: 1.0
+    - _target_: albumentations.HorizontalFlip
+      p: 0.5
+    - _target_: albumentations.pytorch.ToTensorV2
+
+transform_val:
+  _target_: albumentations.Compose
+  transforms:
+    - _target_: albumentations.CenterCrop
+      height: 224
+      width: 224
+      p: 1.0
+    - _target_: albumentations.pytorch.ToTensorV2
+
+transform_test:
+  _target_: albumentations.Compose
+  transforms:
+    - _target_: albumentations.CenterCrop
+      height: 224
+      width: 224
+      p: 1.0
+    - _target_: albumentations.pytorch.ToTensorV2
