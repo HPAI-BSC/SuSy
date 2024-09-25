@@ -5,6 +5,7 @@ SuSy is a Spatial-Based Synthetic Image Detection and Recognition Model, designe
 <img src="susy-logo.png" alt="susy-logo" width="300" height="auto">
 
 ## Quick Links
+- **Paper:** [Present and Future Generalization of Synthetic Image Detectors](https://arxiv.org/abs/2409.14128)
 - **Model:** [HPAI-BSC/SuSy on Hugging Face](https://huggingface.co/HPAI-BSC/SuSy)
 - **Dataset:** [HPAI-BSC/SuSy-Dataset on Hugging Face](https://huggingface.co/datasets/HPAI-BSC/SuSy-Dataset)
 - **Model Demo:** https://colab.research.google.com/drive/15nxo0FVd-snOnj9TcX737fFH0j3SmS05
@@ -24,17 +25,17 @@ SuSy is a Spatial-Based Synthetic Image Detection and Recognition Model, designe
 ## Installation
 
 1. Clone the repository:
-   ```
-   git clone https://github.com/HPAI-BSC/SuSy.git
-   ```
+```
+git clone https://github.com/HPAI-BSC/SuSy.git
+```
 2. Navigate to the project directory:
-   ```
-   cd SuSy
-   ```
+```
+cd SuSy
+```
 3. Install dependencies:
-   ```
-   pip install -r requirements.txt
-   ```
+```
+pip install -r requirements.txt
+```
 
 ## Model Overview
 
@@ -51,13 +52,13 @@ For detailed architecture information, see the [model card](https://huggingface.
 
 1. Configure paths in `staircase_fe.yaml` or a custom experiment YAML file.
 2. Train the model:
-   ```
-   python3 src/train.py experiment=staircase_fe
-   ```
+```
+python3 src/train.py experiment=staircase_fe
+```
 3. Evaluate the model:
-   ```
-   python3 src/eval.py experiment=staircase_fe
-   ```
+```
+python3 src/eval.py experiment=staircase_fe
+```
 
 ## Dataset
 
@@ -118,12 +119,17 @@ This project is licensed under the [Apache 2.0 License](LICENSE).
 
 ```bibtex
 @misc{bernabeu2024susy,
-    title={Present and Future Generalization of Synthetic Image Detectors},
-    author={Bernabeu Perez, Pablo and Lopez Cuena, Enrique and Garcia Gasulla, Dario},
+    title={Present and Future Generalization of Synthetic Image Detectors}, 
+    author={Pablo Bernabeu-Perez and Enrique Lopez-Cuena and Dario Garcia-Gasulla},
     year={2024},
-    month={09}
+    eprint={2409.14128},
+    archivePrefix={arXiv},
+    primaryClass={cs.CV},
+    url={https://arxiv.org/abs/2409.14128}, 
 }
+```
 
+```bibtex
 @thesis{bernabeu2024aidetection,
     title={Detecting and Attributing AI-Generated Images with Machine Learning},
     author={Bernabeu Perez, Pablo},

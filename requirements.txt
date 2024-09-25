@@ -10,8 +10,6 @@ hydra-optuna-sweeper==1.2.0
 
 protobuf==4.25.2
 wandb==0.16.6
-mlflow
-aim==3.19.3
 
 rootutils
 pre-commit
