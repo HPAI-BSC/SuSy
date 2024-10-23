@@ -8,7 +8,8 @@ SuSy is a Spatial-Based Synthetic Image Detection and Recognition Model, designe
 - **Paper:** [Present and Future Generalization of Synthetic Image Detectors](https://arxiv.org/abs/2409.14128)
 - **Model:** [HPAI-BSC/SuSy on Hugging Face](https://huggingface.co/HPAI-BSC/SuSy)
 - **Dataset:** [HPAI-BSC/SuSy-Dataset on Hugging Face](https://huggingface.co/datasets/HPAI-BSC/SuSy-Dataset)
-- **Model Demo:** https://colab.research.google.com/drive/15nxo0FVd-snOnj9TcX737fFH0j3SmS05
+- **Interactive Demo:** https://huggingface.co/spaces/HPAI-BSC/SuSy
+- **Code Demo:** https://colab.research.google.com/drive/15nxo0FVd-snOnj9TcX737fFH0j3SmS05
 
 ## Table of Contents
 - [Installation](#installation)
