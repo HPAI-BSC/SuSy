@@ -1,15 +1,23 @@
-# SuSy: Synthetic Image Detection and Attribution
+<div align="center" id="susytop">
+<img src="susy-logo.png" alt="logo" width="350" margin="10px"></img>
+
+<h2 align="center">
+SuSy: Synthetic Image Detection and Attribution
+</h2>
 
 SuSy is a Spatial-Based Synthetic Image Detection and Recognition Model, designed to detect synthetic images and attribute them to specific generative models. This repository provides the code and instructions to train and evaluate SuSy or your own model for synthetic image detection.
 
-<img src="susy-logo.png" alt="susy-logo" width="300" height="auto">
 
-## Quick Links
-- **Paper:** [Present and Future Generalization of Synthetic Image Detectors](https://arxiv.org/abs/2409.14128)
-- **Model:** [HPAI-BSC/SuSy on Hugging Face](https://huggingface.co/HPAI-BSC/SuSy)
-- **Dataset:** [HPAI-BSC/SuSy-Dataset on Hugging Face](https://huggingface.co/datasets/HPAI-BSC/SuSy-Dataset)
-- **Interactive Demo:** https://huggingface.co/spaces/HPAI-BSC/SuSy
-- **Code Demo:** https://colab.research.google.com/drive/15nxo0FVd-snOnj9TcX737fFH0j3SmS05
+[![arXiv](https://img.shields.io/badge/arXiv-2409.15127-b31b1b.svg)](https://arxiv.org/abs/2409.14128)
+[![Static Badge](https://img.shields.io/badge/HPAI-Website-blue)](https://hpai.bsc.es/)
+[![Model](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model-blue)](https://huggingface.co/HPAI-BSC/SuSy)
+[![Dataset](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Dataset-blue)](https://huggingface.co/datasets/HPAI-BSC/SuSy-Dataset)
+[![Demo](https://img.shields.io/badge/Code%20Demo-Colab-F9AB00?logo=googlecolab&logoColor=white)]([https://huggingface.co/HPAI-BSC/SuSy](https://colab.research.google.com/drive/15nxo0FVd-snOnj9TcX737fFH0j3SmS05))
+[![LinkedIn](https://custom-icon-badges.demolab.com/badge/LinkedIn-0A66C2?logo=linkedin-white&logoColor=fff)](https://www.linkedin.com/company/hpai)
+[![Bluesky](https://img.shields.io/badge/Bluesky-0285FF?logo=bluesky&logoColor=fff)](https://bsky.app/profile/hpai.bsky.social)
+
+</div>
+
 
 ## Table of Contents
 - [Installation](#installation)
